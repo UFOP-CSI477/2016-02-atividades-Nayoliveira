@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Nayara</title>
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="bootstrap.css">
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<script  href="css/bootstrap.min.js"></script>
+		<script href="js/jquery.min.js"></script>
+	</head>
+	<body>
+		<div class="container-fluid">
+			<nav class=" navbar navbar-inverse">
+				<div class="container-fluid">	
+					<ul class="nav">
+						<li><a href="menu.html">MENU</a></li>
+						<li><a href="Cadastrar.html" >CADASTRAR</a></li>
+						<li><a href="lista.html" >LISTA</a></li>
+					</ul>
+				</div>
+			</nav>
+			
+			<div class="container-fluid">
+				<h2>Cadastrar Aluno</h2><br><br>
+				<form>
+					<div class="form-group">
+						<label class="control-label" for="nome">Nome: </label>
+						<div >
+							<input type="text" name="nome" class="form-control">							
+						</div>
+					</div>	
+					<div class="form-group">
+						<label for="sexo" class="control-label">Sexo: </label>
+						<input type="radio" name="genero" value="genero" class="form-control">Feminino
+						<input type="radio" name="genero" value="genero" class="form-control">Masculino
+					</div>
+					<br>
+					<div class="form-group">
+						<label for="area" >Área de interesse: </label>
+						<input type="checkbox" name="interesse" class="form-control">Banco de Dados 
+						<input type="checkbox" name="interesse" class="form-control">Engenharia de Software
+						<input type="checkbox" name="interesse" class="form-control">Otimização								
+					</div>
+					<br>
+					<div>
+						<label for="rua">Rua:</label>
+						<input type="text" name="rua" class="form-control">
+						<label for="numero">Número:</label>
+						<input type="text" name="numero" class="form-control">
+						<label for="endereco">Endereço:</label>						
+						<input type="text" name="endereco" class="form-control">			
+
+					</div>
+						<div id="listaCidades">
+							<p><label for="cidade">Cidade</label>
+							 <select name="Cidade">
+								<option value="1"> João Monlevade</option>
+								<option value="2"> Ouro Preto</option>
+								<option value="3"> Belo Horizonte</option>
+								<option value="4"> Olinda</option>
+								<option value="5"> Gramado</option>
+							</select>
+							<p><label for="estado">Estado:</label>
+							<select name="Cidade">
+								<option value="1"> MG</option>
+								<option value="2"> SP</option>
+								<option value="3"> ES</option>
+								<option value="4"> PE</option>
+								<option value="5"> RS</option>
+							</select>
+						</div>
+						<p><label for="cep">CEP:</label>
+						<p> <input type="text" name="cep" class="form-control" placeholder="00.000-000"></p>
+
+						<p><label for="telefone">Telefone:</label>
+						<p><input type="text" name="telefone" class="form-control"></p>
+
+						<p><label for="celular">Celular:</label>
+						<input type="text" name="celular" class="form-control"></p>
+
+						<p><label for="email">E-mail:</label>
+						<p><input type="text" name="email" placeholder="email" class="form-control" ></p>
+						
+						<p><label for="cpf">CPF</label>
+						<p><input type="number" name="cpf" class="form-control"></p>
+
+						<p><label for="usuario">Usuário:</label>
+						<p><input type="text" name="usuario" class="form-control" ></p>
+
+						<p><label for="senha">Senha</label>
+						<p><input type="password" name="senha" value="********" class="form-control"></p>
+						
+						<p><input type="submit" name="Enviar" value=" CONFIRMA"  class="btn btn-default"></p>
+					</form>	
+				</div>
+			</div>	
+			<!--  footer -->
+			<div class ="container" id="footer">
+				<p class="muted credit"> Nayara Cristina de Oliveira</p>
+				<p class="muted credit">12.2.8384</p>
+   			</div>
+		</div>
+	</body>
+</html>

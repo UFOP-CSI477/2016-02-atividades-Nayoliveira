@@ -1,0 +1,38 @@
+/* Menu */
+#header {
+	margin-bottom: -1.5%;
+}
+.p{
+	color: #00FA9A;
+}
+.pull-right{
+	padding-top: 2%;
+}
+.nav a {
+  color: #00FA9A;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 14px 20px;
+  text-transform: uppercase;
+}
+
+.nav li {
+  display: inline;
+}
+
+.nav li a:hover{
+	color: #95D91E;
+	border-top: solid;
+	text-decoration: none;
+}
+/* fim menu */
+/*rodapé*/
+#footer{
+	border-top: solid 3px #95D91E;	
+	/*border-bottom: solid 3px #95D91E;*/
+	color: #00FA9A;
+}
+
+.container .credit{
+	margin: 20px;
+}
