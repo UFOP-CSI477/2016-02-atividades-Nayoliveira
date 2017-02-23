@@ -6,4 +6,7 @@ Exercicio 2
 Exercicio 3
 
 Proposta de Trabalho Final
+
 Atividade 001
+
+Atividade 002
