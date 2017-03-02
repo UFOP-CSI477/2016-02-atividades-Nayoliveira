@@ -1,0 +1,14 @@
+body {
+  padding-top: 5rem;
+}
+.starter-template {
+  padding: 3rem 1.5rem;
+  text-align: center;
+}
+footer{
+	background-color: yellow;
+	position:fixed;
+	left:0px;
+	bottom:0px;
+	width:100%;
+}
