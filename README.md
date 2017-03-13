@@ -7,6 +7,8 @@ Exercicio 3
 
 Proposta de Trabalho Final
 
-Atividade 001
+Atividade 001 - Análises Clinicas
 
-Atividade 002
+Atividade 002 - Petshop
+
+Prova 01 - evento esportivo
