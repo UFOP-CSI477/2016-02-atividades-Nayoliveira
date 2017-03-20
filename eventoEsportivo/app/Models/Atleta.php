@@ -1,13 +1,30 @@
 <?php
 
 namespace App\Models;
+use Illuminate\Notifications\Notifiable;
+use Illuminate\Foundation\Auth\User as Authenticatable;
 
-use Illuminate\Database\Eloquent\Model;
-
-class Atleta extends Model
+class Atleta extends Authenticatable
 {
-    protected $table = "atletas";
-    protected $fillable = ['id', 'nome', 'login', 'senha'];
-    //public $timestamps = false;só se não usar timestamps na migration
-
+    use Notifiable;
+    protected $rememberTokenName = false;
+    /**
+     * The attributes that are mass assignable.
+     *
+     * @var array
+     */
+    protected $fillable = [
+        'nome', 'login', 'senha',
+    ];
+    /**
+     * The attributes that should be hidden for arrays.
+     *
+     * @var array
+     */
+    protected $hidden = [
+        'senha'
+    ];
+    public function registro(){
+        return $this->hasMany('App\Models\Registro');
+    }
 }
