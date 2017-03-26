@@ -7,6 +7,8 @@ use Illuminate\Database\Eloquent\Model;
 class Turma extends Model
 {
     protected $fillable = ['nome','disciplina_id'];
+      public $timestamps = false;
+
     public function disciplina() {
    		return $this->belongsTo('App\Disciplina');
   	}

@@ -40,7 +40,7 @@
 	        </div>
 	        
 			<div class="col-sm-6 col-sm-offset-3">
-	        	<input class="btn btn-primary btn-lg btn-block" type="submit" value="Salvar"/>    
+	        	<input class="btn btn-success btn-lg btn-block" type="submit" value="Salvar"/>    
 	        	<br><br>
 	        </div>
 

@@ -1,10 +1,13 @@
 @extends('layouts.master')
 	@section('content')
-	    <div class=" col-md-10 col-md-offset-1">
-	    	<div class="panel panel-default">
-	    		<div class="panel-body">
-	    			<table class="table table-striped">
-	    				<h1>Turmas</h1>
+	    <div class="col-sm-10 col-sm-offset-1">
+	<h1>Turmas</h1>
+	<div class="col-sm-2 vcenter">
+		<a href="/turmas/create" class="btn btn-block btn-md btn-success">Inserir</a>
+	</div>
+	
+	<hr>
+	<table class="table table-striped">
 	    				<thead>
 	    					<tr>
 	    						<th>Id</th>

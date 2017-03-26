@@ -1,22 +1,29 @@
 @extends('layouts.master')
-	@section('content')
-	    <div class=" col-md-10 col-md-offset-1">
-	    	<div class="panel panel-default">
-	    		<div class="panel-body">
-	    			<table class="table table-striped">
-	    				<h1>Alunos</h1>
-	    				<thead>
-	    				<tr>
-	    					<th>Nome</th>
-    					</tr>
-	    				</thead>                   
-	    				@foreach($alunos as $a)
-                            <tr>
-                                <td><a href="/alunos/{{ $a->id }}">{{ $a->nome }}</a></td>
-                            </tr>
-                        @endforeach
-                    </table>
-			   </div>
-	        </div>
-	    </div>
-	@endsection
+@section('content')
+<div class="col-sm-10 col-sm-offset-1">
+	<h1>Alunos</h1>
+	<div class="col-sm-2 vcenter">
+		<a href="/alunos/create" class="btn btn-block btn-md btn-success">Inserir</a>
+	</div>
+	
+	<hr>
+	<table class="table table-striped">
+		<thead>
+			<tr>
+				<th>Id</th>
+				<th>Nome</th>
+				<th>Email</th>
+				<th>Cidade</th>
+			</tr>
+		</thead>
+		<tbody>
+			@foreach($alunos as $a)
+			<td>{{ $a->id}}</td>
+			<td><a href="/alunos/{{ $a->id }}">{{ $a->nome }}</a></td>
+			<td>{{ $a->mail}}</td>
+			<td>{{ $a->Cidade->nome}}</td></tr>
+			@endforeach
+		</tbody>
+	</table>
+</div>
+@endsection

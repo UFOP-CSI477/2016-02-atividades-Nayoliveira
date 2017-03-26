@@ -1,6 +1,7 @@
 <?php
 namespace App\Http\Controllers;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use App\Turma;
 use App\Disciplina;
 class TurmaController extends Controller
@@ -10,11 +11,25 @@ class TurmaController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    
+     public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
+
+
+
     public function index()
     {
+         if(Auth::user()->type ==0){
         $turmas = Turma::all();
-        return view('turmas.index')->with('turmas', $turmas);
-    }
+        return view('turmas.index')->with('turmas',$turmas);
+        }
+        else{
+            session()->flash('error','Acesso nao autorizado!!!');
+            return redirect('/');
+        }    }
     /**
      * Show the form for creating a new resource.
      *

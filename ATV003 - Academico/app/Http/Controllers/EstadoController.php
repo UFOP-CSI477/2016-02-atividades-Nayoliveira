@@ -1,6 +1,8 @@
 <?php
 namespace App\Http\Controllers;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+
 use App\Estado;
 class EstadoController extends Controller
 {
@@ -9,6 +11,12 @@ class EstadoController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    
+     public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
     public function index()
     {
         $estados = Estado::all();

@@ -2,33 +2,29 @@
 
 @section('content')
 
-<div class=" col-md-10 col-md-offset-1">
-  <div class="panel panel-default">
-    <div class="panel-body">
-      <table class="table table-striped">
-        <tr>          
-          <div class="col-sm-2 vcenter">
-            <h1>Estados</h1>
-            <a href="/estados/create" class="btn btn-md btn-primary">Inserir</a>
-          </div>
-        </tr>
-        <br>
-        <thead>
-          <tr>
-            <th>Id</th>
-            <th>Nome</th>
-            <th>Sigla</th>
-          </tr>
-        </thead>
-        <tbody>
-          @foreach($estados as $e)
-          <td>{{ $e->id}}</td>
-          <td><a href="/estados/{{$e->id }}">{{ $e->nome }}</a></td>
-          <td>{{ $e->sigla}}</td></tr> 
-          @endforeach
-        </tbody>
-      </table>
-    </div>
-  </div>
+<<div class="col-sm-10 col-sm-offset-1">
+	<h1>Estados</h1>
+	<div class="col-sm-2 vcenter">
+		<a href="/Estados/create" class="btn btn-block btn-md btn-success">Inserir</a>
+	</div>
+	
+	<hr>
+	<table class="table table-striped">	<thead>
+		<tr>
+			<th>Id</th>
+			<th>Nome</th>
+			<th>Sigla</th>
+		</tr>
+	</thead>
+	<tbody>
+		@foreach($estados as $e)
+		<td>{{ $e->id}}</td>
+		<td><a href="/estados/{{$e->id }}">{{ $e->nome }}</a></td>
+		<td>{{ $e->sigla}}</td></tr> 
+		@endforeach
+	</tbody>
+</table>
+</div>
+</div>
 </div>
 @endsection

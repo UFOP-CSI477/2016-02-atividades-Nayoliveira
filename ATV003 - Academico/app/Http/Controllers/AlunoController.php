@@ -1,10 +1,10 @@
 <?php
-
 namespace App\Http\Controllers;
-
 use Illuminate\Http\Request;
-use App\Aluno;
+use Illuminate\Support\Facades\Auth;
 
+use App\Aluno;
+use App\Cidade;
 class AlunoController extends Controller
 {
     /**
@@ -12,12 +12,23 @@ class AlunoController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    
+     public function __construct()
     {
-      $alunos = Aluno::all();
-      return view('alunos.index')->with('alunos', $alunos);
+        $this->middleware('auth');
     }
 
+ public function index()
+    {
+        if(Auth::user()->type ==0){
+        $alunos = Aluno::all();
+        return view('alunos.index')->with('alunos',$alunos);
+        }
+        else{
+            session()->flash('error',' Acesso nao autorizado!!!');
+            return redirect('/');
+        }
+    }
     /**
      * Show the form for creating a new resource.
      *
@@ -25,9 +36,9 @@ class AlunoController extends Controller
      */
     public function create()
     {
-        //
+        $cidades = cidade::all();
+        return view ('alunos.create')->with(compact('cidades'));
     }
-
     /**
      * Store a newly created resource in storage.
      *
@@ -36,9 +47,10 @@ class AlunoController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        Aluno::create($request->all());
+        session()->flash('info', 'Aluno inserido com sucesso!');
+        return redirect('/alunos');
     }
-
     /**
      * Display the specified resource.
      *
@@ -47,9 +59,9 @@ class AlunoController extends Controller
      */
     public function show($id)
     {
-        //
+        $aluno = Aluno::find($id);
+        return view('alunos.show')->with('aluno',$aluno);
     }
-
     /**
      * Show the form for editing the specified resource.
      *
@@ -58,9 +70,12 @@ class AlunoController extends Controller
      */
     public function edit($id)
     {
-        //
+        $aluno = Aluno::find($id);
+        $cidades = Cidade::all();
+        return view('alunos.edit')
+            ->with('aluno',$aluno)
+            ->with('cidades', $cidades);
     }
-
     /**
      * Update the specified resource in storage.
      *
@@ -70,9 +85,18 @@ class AlunoController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $aluno = Aluno::find($id);
+        $aluno->nome = $request->nome;
+        $aluno->rua = $request->rua;
+        $aluno->numero = $request->numero;
+        $aluno->bairro = $request->bairro;
+        $aluno->cep = $request->cep;
+        $aluno->mail = $request->mail;
+        $aluno->cidade_id = $request->cidade_id;
+        
+        $aluno->save();
+        return redirect('/alunos');
     }
-
     /**
      * Remove the specified resource from storage.
      *
@@ -81,6 +105,7 @@ class AlunoController extends Controller
      */
     public function destroy($id)
     {
-        //
+        Aluno::destroy($id);
+        return redirect('/alunos');
     }
 }

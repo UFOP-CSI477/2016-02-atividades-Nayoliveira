@@ -1,16 +1,13 @@
 @extends('layouts.master')
 	@section('content')
-  <div class="row">
-    <div class="col-sm-2 vcenter">
-		  <h1 align="right">Cidades</h1>
-    </div>
-    <div class="col-sm-2 vcenter">
-    	<a href="/cidades/create" class="btn btn-block btn-lg btn-primary">Inserir</a>
-    </div>
+ <div class="col-sm-10 col-sm-offset-1">
+  <h1>Cidades</h1>
+  <div class="col-sm-2 vcenter">
+    <a href="/cidades/create" class="btn btn-block btn-md btn-success">Inserir</a>
   </div>
+  
   <hr>
-  <div class="col-sm-10 col-sm-offset-1">
-      <table class="table table-striped">
+  <table class="table table-striped">
         <thead>
           <tr>
             <th>Id</th>
@@ -28,4 +25,3 @@
       </table>
 	</div>
 @endsection
-	@endsection

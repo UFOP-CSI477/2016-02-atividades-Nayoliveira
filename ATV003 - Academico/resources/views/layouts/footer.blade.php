@@ -1,5 +1,5 @@
 <footer class="footer">
 	<div class="container">
-		<span class="text-muted">Universidade Federal de Ouro Preto</span>
+		<p class="text-muted">Universidade Federal de Ouro Preto</p>
 	</div>
 </footer>

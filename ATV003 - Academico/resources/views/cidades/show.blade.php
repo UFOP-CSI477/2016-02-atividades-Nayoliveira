@@ -18,11 +18,11 @@
           <br>
           <div class="col-sm-6 col-sm-offset-3">
             
-            <a href="/cidades/{{ $cidade->id }}/edit" class="btn btn-primary">Editar</a>
+            <a href="/cidades/{{ $cidade->id }}/edit" class="btn btn-default">Editar</a>
 
             <input type="submit" class="btn btn-danger" value="Excluir"/>
 
-            <a href="/cidades" class="btn btn-default">Voltar</a>
+            <a href="/cidades" class="btn btn-primary">Voltar</a>
           </div>
         </div>
 
