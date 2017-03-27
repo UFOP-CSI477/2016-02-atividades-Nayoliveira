@@ -11,4 +11,6 @@ Atividade 001 - Análises Clinicas
 
 Atividade 002 - Petshop
 
-Prova 01 - evento esportivo
+Atividade 003 - Academico
+
+Prova 01 - evento esportivo - Extra
